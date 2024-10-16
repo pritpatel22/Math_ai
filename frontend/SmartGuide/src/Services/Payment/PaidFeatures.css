@@ -1,0 +1,115 @@
+/* Container for the paid features section */
+.paid-features {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* For positioning elements on top */
+}
+
+/* Header styling */
+.paid-features h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Button styling */
+.paid-features .btn-primary {
+    background-color: #11b98f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.paid-features .btn-primary:hover {
+    background-color: #098264;
+    transform: scale(1.05);
+}
+
+/* Layout for the scientific calculator and graph */
+.paid-features .calculator-container,
+.paid-features .graph-section {
+    margin-bottom: 20px; /* Space between the calculator and graphs */
+}
+
+/* Positioning the calculator container */
+.paid-features .calculator-container {
+    padding: 20px;
+    background: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px; /* Ensure enough space for calculator */
+    position: relative; /* For positioning within the container */
+}
+
+/* Positioning the graph section */
+.paid-features .graph-section {
+    padding: 20px;
+    background: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Graph heading styling */
+.paid-features .graph-section h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Graph description styling */
+.paid-features .graph-description {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 20px;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 992px) {
+    /* For tablets and smaller desktops */
+    .paid-features .calculator-container,
+    .paid-features .graph-section {
+        margin-bottom: 20px; /* Ensure spacing is maintained */
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    /* For mobile devices */
+    .paid-features .calculator-container {
+        min-height: 300px; /* Adjust height for smaller screens */
+    }
+
+    .paid-features .graph-section {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    /* For very small devices */
+    .paid-features h2 {
+        font-size: 1.5rem; /* Smaller header font size */
+    }
+
+    .paid-features .btn-primary {
+        font-size: 0.9rem; /* Smaller button font size */
+        padding: 8px 16px; /* Smaller button padding */
+    }
+
+    .paid-features .graph-section h3 {
+        font-size: 1.25rem; /* Smaller graph heading font size */
+    }
+
+    .paid-features .graph-description {
+        font-size: 0.875rem; /* Smaller description font size */
+    }
+}

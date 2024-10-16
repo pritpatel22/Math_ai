@@ -1,0 +1,31 @@
+.google-signup-btn {
+    display: flex;
+    align-items: center;
+    background-color: #4285F4; /* Google blue color */
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.google-signup-btn:hover {
+    background-color: #357ae8; /* Slightly darker blue */
+    transform: translateY(-2px);
+}
+
+.google-signup-btn:active {
+    background-color: #3367d6; /* Even darker blue */
+    transform: translateY(0);
+}
+
+.google-logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    border-radius: 50%;
+}

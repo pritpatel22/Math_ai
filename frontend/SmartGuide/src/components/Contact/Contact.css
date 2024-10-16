@@ -1,0 +1,69 @@
+/* Contact.css */
+.contact-page {
+    padding: 20px;
+}
+
+.contact-details, .description {
+    margin-bottom: 40px;
+}
+
+.contact-details h2, .description h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact-details p, .description p {
+    font-size: 1.2rem;
+}
+
+.contact-form {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.contact-form .form-label {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.contact-form .form-control {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.contact-form .form-control:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+
+.contact-form .error-message {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 4px;
+}
+
+.contact-form .btn {
+    padding: 12px;
+    font-size: 1rem;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.contact-form .btn:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .contact-details, .description, .contact-form {
+        margin: 0 10px;
+    }
+}

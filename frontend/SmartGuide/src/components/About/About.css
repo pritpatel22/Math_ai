@@ -1,0 +1,175 @@
+/* About.css */
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* About Section */
+.about {
+    background-color: #fffff2;
+    padding: 60px 0;
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-title {
+    color: #333;
+}
+
+.smartguide {
+    color: #28a745; /* Example color for SmartGuide */
+}
+
+/* Description */
+.about-description {
+    color: #6c757d; /* Light gray for description */
+}
+
+/* Card styles */
+.card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #343a40;
+}
+
+.card-text {
+    color: #495057;
+}
+
+/* Page title */
+.page-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Product Section */
+.products {
+    background-color: #fffff2;
+    padding: 60px 0;
+}
+
+.product-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.product-column {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.product-number {
+    font-size: 2rem;
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+.logo-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.visit-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.visit-btn:hover {
+    background-color: #218838;
+}
+
+/* Separator */
+.separator {
+    height: 1px;
+    background-color: #fffff2;
+    margin: 20px 0;
+}
+
+/* Journey Section */
+.our-journey-title {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.our-journey-title h2 {
+    font-size: 2rem;
+    color: #007bff;
+}
+
+.journey-separator {
+    width: 100px;
+    margin: 10px auto;
+}
+
+/* About Page Content */
+.about-page-content {
+    margin-bottom: 40px;
+}
+
+.about-page-content h3 {
+    font-size: 1.8rem;
+    color: #343a40;
+}
+
+.about-page-content p {
+    color: #495057;
+    line-height: 1.6;
+}
+
+/* Join Our Team Section */
+.join-our-team {
+    background-color: #fffff2;
+    color: #242222;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.join-our-team h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.btn.green {
+    background-color: #28a745;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn.green:hover {
+    background-color: #218838;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .product-row {
+        flex-direction: column;
+    }
+
+    .product-column {
+        margin: 10px 0;
+    }
+}

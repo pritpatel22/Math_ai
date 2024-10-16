@@ -1,0 +1,84 @@
+/* Container for the entire graph section */
+.graph-container {
+    padding: 20px;
+    background: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Accordion Item (each graph container) */
+.accordion-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.accordion-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Accordion Header (graph titles) */
+.accordion-header {
+    padding: 15px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    background-color: #eaeaea;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #dcdcdc;
+}
+
+/* Accordion Body (graph descriptions and charts) */
+.accordion-body {
+    padding: 20px;
+    background-color: #f4f4f4;
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Styling for the chart inside the accordion */
+.accordion-body canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Transition for showing/hiding chart */
+.chartjs-render-monitor {
+    transition: opacity 0.5s ease;
+}
+
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+    .graph-container {
+        padding: 15px;
+    }
+
+    .accordion-header {
+        font-size: 1.125rem;
+    }
+
+    .accordion-body {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .accordion-header {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    .accordion-body {
+        font-size: 0.875rem;
+        padding: 12px;
+    }
+}

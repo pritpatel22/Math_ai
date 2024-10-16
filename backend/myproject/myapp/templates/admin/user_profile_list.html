@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block title %}User Profiles{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background-color: #f8f9fa; /* Light gray background */
+    }
+    .container {
+        background-color: #ffffff; /* White background for the container */
+        border-radius: 0.5rem; /* Rounded corners */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        padding: 2rem; /* Padding around the content */
+    }
+    h1, h2 {
+        color: #343a40; /* Dark gray color for the headings */
+        text-align: center; /* Center align headings */
+    }
+    .table {
+        background-color: #ffffff; /* White background for the table */
+    }
+    .table th {
+        background-color: #007bff; /* Bootstrap primary color */
+        color: white; /* White text for header */
+    }
+    .table tbody tr:hover {
+        background-color: #f1f1f1; /* Light gray on hover */
+    }
+    .img-thumbnail {
+        border: 2px solid #007bff; /* Blue border for the avatar */
+    }
+    .alert {
+        margin-top: 1rem; /* Margin for alert */
+    }
+</style>
+
+<div class="container mt-5">
+    <h2 class="mb-4">Admin Site</h2> <!-- Admin Site heading -->
+    <h1 class="mb-4">User Profiles</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Avatar</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for profile in profiles %}
+                <tr>
+                    <td>{{ profile.user.username }}</td>
+                    <td>
+                        <img src="{{ profile.avatar }}" alt="{{ profile.user.username }}'s avatar" class="img-thumbnail" style="width: 100px; height: auto;">
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% if not profiles %}
+        <div class="alert alert-info" role="alert">
+            No profiles found.
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

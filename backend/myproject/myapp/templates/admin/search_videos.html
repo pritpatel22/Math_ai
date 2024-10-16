@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5">
+    <h2>Search for Videos</h2>
+    <form method="POST" class="mb-4">
+        {% csrf_token %}
+        <input type="text" name="query" class="form-control" placeholder="Search videos..." required>
+        <button type="submit" class="btn btn-primary mt-2">Search</button>
+    </form>
+
+    <ul class="list-group">
+        {% for video in videos %}
+            <li class="list-group-item">
+                <h5>{{ video.snippet.title }}</h5>
+                <a href="https://www.youtube.com/watch?v={{ video.id.videoId }}" target="_blank">Watch Video</a>
+                <a href="{% url 'add_video_to_course' course_id video.id.videoId %}" class="btn btn-success btn-sm">Add Video</a>  <!-- Use course_id -->
+            </li>
+        {% empty %}
+            <li class="list-group-item">No videos found.</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Add New Video</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .video-form-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="video-form-container mt-5">
+        <h2 class="text-center">Add New Video to {{ course.title }}</h2>
+        {% if errors %}
+            <div class="alert alert-danger mt-2" role="alert">
+                <ul>
+                {% for field, error in errors.items %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+        
+        <form method="POST" class="needs-validation" novalidate>
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="title">Video Title</label>
+                <input type="text" id="title" name="title" class="form-control" placeholder="Enter Video Title" required>
+                <div class="invalid-feedback">Please enter a video title.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="video_url">Video URL</label>
+                <input type="url" id="video_url" name="video_url" class="form-control" placeholder="Enter Video URL" required>
+                <div class="invalid-feedback">Please provide a valid video URL.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="thumbnail_url">Thumbnail URL</label>
+                <input type="url" id="thumbnail_url" name="thumbnail_url" class="form-control" placeholder="Enter Thumbnail URL" required>
+                <div class="invalid-feedback">Please provide a valid thumbnail URL.</div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Add Video</button>
+            <a href="{% url 'course_detail' course.id %}" class="btn btn-secondary">Back to Course Details</a>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

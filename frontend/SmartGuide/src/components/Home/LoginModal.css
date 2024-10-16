@@ -1,0 +1,118 @@
+/* Modal Content Styling */
+.home-modal .modal-content {
+    border-radius: 10px;
+    background-color: #ffffff; /* White background for modal content */
+    padding: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    width: 80%; /* Default width */
+    max-width: 500px; /* Maximum width */
+    max-height: 80vh; /* Maximum vertical height */
+    margin: auto; /* Center horizontally */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Animation */
+    z-index: 2000; /* Layering */
+}
+
+
+/* Modal Header Styling */
+.home-modal .modal-header {
+    background-color: #f7f7f7; /* Light gray background */
+    color: #000000; /* Black text color */
+    font-size: 1.5rem;
+    text-align: center; /* Center the title */
+    width: 100%; /* Full width */
+    border-bottom: 2px solid #007bff; /* Blue border */
+}
+
+/* Modal Body Styling */
+.home-modal .modal-body {
+    font-size: 1.2rem;
+    color: #343a40; /* Dark text color */
+    overflow-y: auto; /* Scroll if content overflows */
+    padding: 20px; /* Padding for spacing */
+}
+
+/* Center text in body */
+.home-modal .modal-body p {
+    text-align: center;
+}
+
+/* Modal Footer Styling */
+.home-modal .modal-footer {
+    background-color: #ffffff; /* White background for footer */
+    border: none; /* No border */
+    display: flex;
+    justify-content: center; /* Center footer content */
+    align-items: center;
+    padding: 10px; /* Padding for spacing */
+}
+
+/* Capsule Link Styling */
+.home-modal .modal-footer a {
+    display: inline-block;
+    background-color: #007bff; /* Blue background */
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 50px; /* Capsule shape */
+    text-decoration: none;
+    margin: 0 10px; /* Space between links */
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Animations */
+}
+
+.home-modal .modal-footer a:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    color: #fff;
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.home-modal .modal-footer span {
+    font-size: 1.5rem;
+    color: #343a40; /* Dark text color */
+    margin: 0 10px;
+}
+
+/* Close Button Styling */
+.home-modal .modal-header .close {
+    border: none;
+    font-size: 1.5rem; /* Adjust size */
+    padding: 0.25rem 0.5rem; /* Padding for the button */
+    color: #000000; /* Black color for close button */
+    transition: color 0.3s ease; /* Smooth color transition */
+    background-color: transparent; /* Transparent background */
+    outline: none; /* Remove the default outline */
+}
+
+.home-modal .modal-header .close:focus {
+    outline: none; /* Remove focus outline */
+    box-shadow: none; /* Remove focus box-shadow */
+}
+
+.close:hover {
+    color: #ff0000; /* Change color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home-modal .modal-content {
+        width: 90%; /* Increase width for smaller screens */
+        max-width: none; /* Remove max-width for smaller screens */
+    }
+    
+    .home-modal .modal-header, .home-modal .modal-footer {
+        padding: 10px 5px; /* Reduce padding for smaller screens */
+    }
+    
+    .home-modal .modal-body {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .home-modal .modal-content {
+        width: 95%; /* Further increase width for very small screens */
+    }
+    
+    .home-modal .modal-body {
+        font-size: 0.9rem; /* Further adjust font size for very small screens */
+    }
+}

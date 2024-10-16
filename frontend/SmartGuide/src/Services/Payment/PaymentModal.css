@@ -1,0 +1,183 @@
+/* Modal Responsive Design */
+.modal-responsive .modal-dialog {
+    max-width: 90%;
+    margin: 20px;
+}
+
+/* Payment Modal Styles */
+.payment-modal {
+    background-color: white;
+    z-index: 1050;
+}
+
+/* .modal-backdrop {
+    z-index: 1048; 
+} */
+
+
+.modal-header {
+    background-color: #f7f7f7;
+    border-bottom: none;
+}
+
+.modal-body {
+    padding: 20px; /* Reduced padding for better mobile responsiveness */
+}
+
+/* Payment Form Styles */
+.payment-form .payment-options {
+    display: flex;
+    flex-direction: column; /* Stack options vertically on smaller screens */
+    gap: 10px;
+}
+
+.input-field {
+    margin-top: 10px;
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    font-size: 0.9rem; /* Adjust font size for mobile */
+}
+
+/* Success Screen Styles */
+.success-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #28a745; /* Green background */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050; /* Ensure it appears above other elements */
+    cursor: pointer; /* Show pointer cursor for the clickable area */
+    text-align: center;
+}
+
+.success-content {
+    max-width: 90%;
+    padding: 20px;
+}
+
+.success-icon {
+    animation: tick-animation 1s ease-in-out;
+    font-size: 4rem; /* Adjust size for responsiveness */
+    margin-bottom: 20px;
+}
+
+.success-message h4 {
+    color: #ffffff;
+    font-size: 1.5rem; /* Adjust font size for responsiveness */
+}
+
+/* Animation Classes */
+.animate-modal {
+    animation: fadeInModal 0.6s ease-in-out;
+}
+
+.animate-slidein {
+    animation: slideIn 0.4s ease-in-out;
+}
+
+.animate-fadein {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.animate-bounce {
+    animation: bounce 0.6s ease infinite;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeInModal {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes tick-animation {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 576px) { /* Extra small devices */
+    .modal-body {
+        padding: 15px;
+    }
+
+    .input-field {
+        font-size: 0.8rem; /* Further adjust font size for very small screens */
+    }
+
+    .success-icon {
+        font-size: 3rem;
+    }
+
+    .success-message h4 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) { /* Tablets and smaller desktops */
+    .modal-body {
+        padding: 20px;
+    }
+
+    .input-field {
+        font-size: 0.9rem;
+    }
+
+    .success-icon {
+        font-size: 4rem;
+    }
+
+    .success-message h4 {
+        font-size: 1.5rem;
+    }
+}

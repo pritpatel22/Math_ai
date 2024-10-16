@@ -1,0 +1,155 @@
+.hero {
+    background: url('C:\\Users\\kp250\\Desktop\\My_Project\\frontend\\SmartGuide\\src\\assets\\image3.png') no-repeat center center/cover;
+    min-height: 60vh; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    padding: 2rem; /* Add padding for spacing */
+    width: 100%;
+    background-color: #10B98F; /* Background color merged */
+    box-sizing: border-box;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent; /* Slightly lighter dark overlay for better visibility */
+    z-index: 0;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+    background: transparent;
+    max-width: 800px; /* Control the max width of the content */
+    width: 100%;
+    padding: 0 1rem; /* Add padding for responsiveness */
+    display: flex;
+    flex-direction: column; /* Ensure column layout */
+    align-items: center;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 5rem; /* Large font size for the heading */
+    font-weight: bold;
+    color: #242F2C;
+    margin-bottom: 1rem;
+    line-height: 1.2; /* Line height for better readability */
+    animation: fadeInUp 1s ease-out; /* Add fadeInUp animation */
+}
+
+.hero p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #242F2C; /* Adjust font size for the paragraph */
+    margin-bottom: 2rem; /* Space between text and button */
+    animation: fadeInUp 1.2s ease-out; /* Add fadeInUp animation with delay */
+}
+
+.hero .btn-outline-light {
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 3px solid #11b98f;
+    color: #11b98f;
+    width: auto;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    animation: fadeInUp 1.4s ease-out; /* Add fadeInUp animation with more delay */
+}
+
+.hero .btn-outline-light:hover {
+    background-color: #11b98f;
+    border: none;
+    color: white;
+    transform: scale(1.05);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 1.75rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+/* Additional styles merged */
+.hero .section-container {
+    position: relative;
+    z-index: 1;
+    background: transparent;
+    max-width: 800px; /* Control the max width of the content */
+    width: 100%;
+    padding: 0 1rem; /* Add padding for responsiveness */
+    display: flex;
+    flex-direction: column; /* Ensure column layout */
+    align-items: center;
+    text-align: center;
+    background-color: #11b98f;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+
+    /* Font and text settings */
+    font-family: "akkurat-regular" !important;
+
+    /* Tutor color variables */
+    --tutor-text-size: 16px;
+    --tutor-color-success: #24A148;
+    --tutor-color-success-rgb: 36, 161, 72;
+    --tutor-color-warning: #ED9700;
+    --tutor-color-warning-rgb: 237, 151, 0;
+    --tutor-color-danger: #F44337;
+    --tutor-color-danger-rgb: 244, 67, 55;
+    --tutor-color-secondary: #41454F;
+    --tutor-color-muted: #757c8e;
+    --tutor-color-primary: #11b98f;
+    --tutor-color-primary-hover: #00bd91;
+
+    /* WooCommerce color variables */
+    --woocommerce: #a46497;
+    --wc-primary: #a46497;
+    --wc-primary-text: white;
+    --wc-secondary: #ebe9eb;
+    --wc-secondary-text: #515151;
+}
+
+
+.video-thumbnail {
+    width: 100%;
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s;
+}
+
+.video-thumbnail:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.video-title {
+    text-align: center;
+    margin-top: 0.5rem; /* Space between thumbnail and title */
+    font-weight: bold; /* Make the title bold */
+    color: #242F2C; /* Match the hero section text color */
+    font-size: 1.2rem; /* Font size for titles */
+}
+
+/* Adjust existing styles as necessary */

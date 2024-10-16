@@ -1,0 +1,175 @@
+/* Styles for ServicesPage component */
+.container-fluid {
+    padding: 20px;
+}
+
+/* Header styling */
+h1 {
+    font-size: 3rem;
+    color: #333;
+    text-align: center; /* Center-align header */
+    margin-bottom: 10px; /* Space below header */
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease, font-size 0.3s ease; /* Transition effects */
+}
+
+/* Header hover effect */
+h1:hover {
+    color: #008967; /* Change color on hover */
+    transform: scale(1.05); /* Slightly scale up the header */
+    font-size: 3.2rem; /* Slightly increase font size on hover */
+}
+
+/* Calculator section styling */
+.calculator-section {
+    display: flex;
+    justify-content: center; /* Center-align calculator horizontally */
+    margin-bottom: 20px;
+}
+
+/* Payment options styling */
+.payment-options {
+    background-color: #eaf4e5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.payment-options h2 {
+    font-size: 1.75rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.payment-options p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Button styling */
+.btn-success {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Paid features section styling */
+.paid-features-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Scientific Calculator Section */
+.scientific-calculator-section {
+    display: flex;
+    justify-content: center; /* Center-align scientific calculator horizontally */
+}
+
+/* Calculator Body */
+.calculator-body {
+    width: 100%;
+    max-width: 400px; /* Adjust the width as needed */
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* Scientific Calculator Body */
+.scientific-calculator-body {
+    width: 100%;
+    max-width: 500px; /* Adjust the width as needed for scientific calculator */
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    padding: 20px;
+}
+
+
+/* Responsive Design for Tablets and Larger Devices */
+@media (max-width: 992px) {
+    .calculator-body, .scientific-calculator-body {
+        max-width: 90%; /* Ensure calculators are responsive on tablets */
+    }
+
+    .calculator-section, .scientific-calculator-section {
+        margin-bottom: 20px;
+    }
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+    /* Smaller font sizes for mobile screens */
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .payment-options, .paid-features-section {
+        padding: 15px;
+    }
+
+    .payment-options h2 {
+        font-size: 1.5rem;
+    }
+
+    .payment-options p {
+        font-size: 0.9rem;
+    }
+
+    .btn-success {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .calculator-body, .scientific-calculator-body {
+        max-width: 100%; /* Full width for smaller screens */
+        padding: 10px;
+    }
+}
+
+/* Responsive Design for Extra-Small Devices */
+@media (max-width: 480px) {
+    /* Further adjustments for small screens */
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    .payment-options, .paid-features-section {
+        padding: 10px;
+    }
+
+    .payment-options h2 {
+        font-size: 1.2rem;
+    }
+
+    .payment-options p {
+        font-size: 0.8rem;
+    }
+
+    .btn-success {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    .calculator-body, .scientific-calculator-body {
+        max-width: 100%; /* Full width for extra-small screens */
+        padding: 5px;
+    }
+}

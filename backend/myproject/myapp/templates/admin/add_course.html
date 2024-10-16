@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="mb-4">Add New Course</h2>
+
+    {% if errors %}
+        <div class="alert alert-danger">
+            <ul>
+                {% for field, message in errors.items %}
+                    <li>{{ field|capfirst }}: {{ message }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+
+    <form method="POST" class="needs-validation" novalidate>
+        {% csrf_token %}
+        
+        <div class="form-group">
+            <label for="id_title">Course Title</label>
+            <input type="text" id="id_title" name="title" class="form-control" placeholder="Enter Course Title" required value="{{ request.POST.title }}">
+            <div class="invalid-feedback">Please enter a course title.</div>
+        </div>
+
+        <div class="form-group">
+            <label for="id_description">Course Description</label>
+            <textarea id="id_description" name="description" class="form-control" placeholder="Enter Course Description" required>{{ request.POST.description }}</textarea>
+            <div class="invalid-feedback">Please provide a course description.</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Add Course</button>
+        <a href="{% url 'course_list' %}" class="btn btn-secondary">Back to Course List</a>
+    </form>
+</div>
+
+<script>
+    // Example JavaScript to enable Bootstrap validation feedback
+    (function () {
+        'use strict';
+        var forms = document.querySelectorAll('.needs-validation');
+        Array.prototype.slice.call(forms).forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    })();
+</script>
+{% endblock %}

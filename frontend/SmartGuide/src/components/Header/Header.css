@@ -1,0 +1,234 @@
+/* Header Styles */
+.header {
+    padding: 10px 20px;
+    justify-content: space-evenly;
+    background-color: #11b98f; /* Background color for the header */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    display: flex;
+    align-items: center; /* Align items vertically */
+    overflow: hidden; /* Hide overflow to maintain capsule shape */
+    transition: padding 0.3s ease, border-radius 0.3s ease, background-color 0.3s ease; /* Smooth transition for shrinking effect */
+    z-index: 100; 
+}
+
+/* Shrinked Navbar */
+.header.shrink {
+    position: fixed;
+    padding: 5px 20px; /* Reduced padding for the minimized state */
+    border-radius: 30px; /* Smaller border-radius for minimized state */
+    background: none;
+    transition-duration: 0.7s;
+    transform: translateY(10px) translateX(10px); 
+}
+/* Custom Toggler Icon */
+.header .navbar-toggler {
+    background-color: transparent; /* Background color for the toggler */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+/* Custom lines for the toggler icon */
+.header .navbar-toggler .navbar-toggler-icon {
+    background-color: #11b98f; /* Default background for the toggler lines */
+    border: 1px; /* Remove default border */
+    border-radius: 10%;
+    opacity: 40%;
+}
+
+.header.shrink .navbar-toggler .navbar-toggler-icon-outline-light{
+    color: #11b98f;
+    border-color: #11b98f; /* Line color when navbar is shrunk */
+}
+
+.header.shrink .navbar-toggler:hover .navbar-toggler-icon {
+    background-color: #11b98f; /* Line color on hover when navbar is shrunk */
+}
+
+
+
+/* Brand Styling */
+.header .navbar-brand {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff; /* Text color for the brand */
+    padding: 8px 16px; /* Padding inside the brand capsule */
+    border-radius: 25px; /* Rounded capsule shape */
+    background: transparent; /* Background color for the capsule */
+    margin-right: 20px; /* Space between brand and nav links */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.header.shrink .navbar-brand {
+    transition-duration: 0.7s;
+    color: #11b98f;
+    font-size: 1rem; /* Smaller font size for minimized state */
+    padding: 5px 15px; /* Reduced padding for minimized state */
+    border-radius: 20px; /* Smaller border-radius for minimized state */
+}
+
+.header .navbar-brand:hover {
+    color: #00533f;
+}
+
+/* Navbar Links Styling */
+.header .navbar-nav {
+    margin-left: auto; /* Align nav links to the right */
+    display: flex; /* Ensure links are aligned in a row */
+    align-items: center; /* Align links vertically */
+    transition: opacity 0.3s ease-in; /* Smooth transition for visibility */
+    z-index: 1000;
+}
+
+.header.shrink .navbar-nav:hover {
+    color: #0b755a; /* Hide nav links when navbar is shrunk */
+}
+
+/* Button Styling */
+.header .btn-outline-light {
+    font-size: 1rem;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    margin-left: 15px; /* Space between button and nav links */
+    padding: 5px 15px; /* Padding for button */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+}
+
+.header.shrink .btn-outline-light {
+    font-size: 0.9rem; /* Smaller font size for minimized state */
+    padding: 4px 10px; /* Reduced padding for minimized state */
+    margin-left: 0; /* No margin in minimized state */
+    border: 1px solid #11b98f;
+    color: #11b98f;
+}
+
+.header .btn-outline-light:hover {
+    background-color: #0b755a;
+    color: #edf1f7;
+}
+
+.header .shrink .btn-outline-light:hover {
+    background-color: #0b755a;
+    color: #edf1f7;
+    border: none;
+}
+/* Updated Toggler Styles */
+.header .navbar-toggler {
+    background-color: transparent; /* Keep background transparent */
+    border: none; /* Remove border */
+    color: #ffffff; /* Default color for the toggler */
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.header.shrink .navbar-toggler {
+    color: #11b98f; /* Match the color with the shrunk navbar-brand */
+}
+
+.header.shrink .navbar-toggler:hover {
+    color: #00533f; /* Change color on hover similar to navbar-brand */
+}
+
+/* Navbar Links Styling */
+.header .navbar-nav .nav-link {
+    color: #ffffff; /* Default color for nav links */
+    font-size: 1rem; /* Consistent font size */
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 8px 16px; /* Padding similar to navbar-brand */
+}
+
+
+.header.shrink .navbar-nav .nav-link {
+    color: #11b98f; /* Change color when navbar shrinks */
+}
+
+.header .navbar-nav .nav-link:hover {
+    color: #00533f; /* Hover color for non-shrunk state */
+}
+
+.header.shrink .navbar-nav .nav-link:hover {
+    color: #00533f; /* Hover color for shrunk state */
+}
+
+/* Active and Focused Navbar Link Styling */
+.header .navbar-nav .nav-link.active,
+.header .navbar-nav .nav-link:focus {
+    color: #0b755a; /* Active and focus color similar to navbar-brand */
+}
+
+/* Shrinked Navbar Links */
+.header.shrink .navbar-nav .nav-link.active,
+.header.shrink .navbar-nav .nav-link:focus {
+    color: #00533f; /* Active and focus color when shrunk */
+}
+
+/* Collapsing transition (no change needed here) */
+.header .collapse {
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    max-height: 0; /* Start collapsed */
+}
+
+.header .collapse.show {
+    max-height: 500px; /* Set a maximum height for the expanded state */
+    opacity: 1; /* Fully visible */
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) { /* Medium and smaller screens */
+    .header .nav-link {
+        margin-left: 10px;
+    }
+
+    .header .btn-outline-light {
+        font-size: 0.95rem;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 768px) { /* Small screens */
+    .header .navbar-brand {
+        font-size: 1.25rem;
+    }
+
+    .header .nav-link {
+        font-size: 0.9rem;
+        margin-left: 8px;
+    }
+
+    .header .btn-outline-light {
+        font-size: 0.9rem;
+        margin-left: 8px;
+    }
+}
+
+@media (max-width: 576px) { /* Extra small screens */
+    .header {
+        padding: 8px 15px; /* Adjust padding for smaller screens */
+    }
+
+    .header .navbar-brand {
+        font-size: 1.1rem;
+    }
+
+    .header .nav-link {
+        font-size: 0.8rem;
+        margin-left: 5px;
+    }
+
+    .header .btn-outline-light {
+        font-size: 0.8rem;
+        margin-left: 5px;
+        padding: 4px 10px; /* Adjust padding for smaller screens */
+    }
+
+    .header .navbar-toggler {
+        margin-left: auto; /* Ensure the toggle button aligns correctly */
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

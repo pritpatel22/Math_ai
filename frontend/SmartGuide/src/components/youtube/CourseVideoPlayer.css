@@ -1,0 +1,136 @@
+.course-video-player {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.course-list {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+}
+
+.course-list li {
+    cursor: pointer; /* Pointer cursor for clickable items */
+    padding: 10px 15px; /* Smaller padding for buttons */
+    border: 1px solid #11b98f; /* Border color to match theme */
+    border-radius: 5px; /* Rounded corners */
+    margin: 5px 0; /* Space between buttons */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.course-list li:hover {
+    background-color: #f0f0f0; /* Light gray background on hover */
+}
+
+.course-list li.active {
+    background-color: #11b98f; /* Active state color */
+    color: white; /* Text color for active state */
+}
+
+.video-list-section {
+    margin-top: 20px;
+}
+
+.video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.video-thumbnail {
+    flex: 1 1 calc(33.33% - 30px); /* Responsive flexbox layout */
+    max-width: calc(33.33% - 30px);
+    cursor: pointer;
+    text-align: center;
+    background-color: #f8f9fa; /* Light background for thumbnails */
+    border-radius: 8px;
+    overflow: hidden; /* Prevents overflow of rounded corners */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transitions */
+}
+
+.video-thumbnail img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.video-thumbnail img:hover {
+    transform: scale(1.05);
+}
+
+.video-thumbnail p {
+    margin: 5px 0;
+    color: #333; /* Darker text color for titles */
+}
+
+.floating-video-player {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    z-index: 1000;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 350px; /* Adjust width based on screen size */
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 1001; /* Ensure the button is above other elements */
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .course-list li {
+        flex: 1 1 calc(50% - 30px); /* Two columns on smaller screens */
+    }
+
+    .video-thumbnail {
+        flex: 1 1 calc(50% - 30px); /* Two columns on smaller screens */
+    }
+
+    .floating-video-player {
+        width: 90%; /* Slightly reduce width on mobile */
+        left: 5%;
+        right: 5%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .course-list li {
+        flex: 1 1 100%; /* One column on extra small screens */
+    }
+
+    .video-thumbnail {
+        flex: 1 1 100%; /* One column on extra small screens */
+    }
+
+    .floating-video-player {
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+    }
+}

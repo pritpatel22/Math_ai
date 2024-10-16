@@ -1,0 +1,99 @@
+/* SplashPage.css */
+
+.splash-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #11b98f, #076850);
+    background-size: 400% 400%; /* Gradient size for animation */
+    color: #ffffff;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    animation: gradientAnimation 10s ease infinite, fadeIn 1s ease-in-out;
+}
+
+/* Gradient background animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+/* Splash page fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Title with animation */
+.splash-title {
+    font-size: 4rem; /* Increased size for emphasis */
+    margin: 20px;
+    font-family: 'Arial', sans-serif; /* Chosen font family */
+    font-weight: bold; /* Bold style */
+    letter-spacing: 2px; /* Added letter spacing for elegance */
+    opacity: 0;
+    animation: titleFadeIn 1s 0.5s forwards;
+}
+
+@keyframes titleFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button styling */
+.start-button {
+    background-color: #ffffff;
+    color: #11b98f;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px; /* Adjusted size */
+    font-size: 1.2rem; /* Increased size for better visibility */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 3rem;
+}
+
+/* Button hover effect */
+.start-button:hover {
+    background-color: #10483a;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+/* Button click transition */
+.start-button:active {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Fade-out effect for transition */
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+/* Optional: Add a subtle pulse effect on focus */
+.start-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px #008967;
+}

@@ -1,0 +1,191 @@
+/* Image Upload Component Styles */
+.image-upload {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+}
+
+.image-upload .container-fluid {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.image-upload h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input[type="file"] {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Preview section for the uploaded image */
+.preview {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.preview img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Upload section styling */
+.upload-section {
+    width: 100%;
+    max-width: 700px;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Button styling */
+.upload-button {
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto;
+    display: block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.upload-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Custom Modal Styles */
+.custom-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1050;
+}
+
+.custom-modal {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.custom-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.custom-modal-header h5 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.custom-modal-body {
+    margin-top: 20px;
+}
+
+.custom-modal-footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* Confirmation card styling */
+.confirmation-card,
+.confirmation-result-card,
+.solution-card {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.confirmation-card {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f0f8ff;
+}
+
+.confirmation-result-card {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e6ffe6;
+}
+
+.solution-card {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff3e6;
+}
+
+.confirmation-card .btn-success {
+    background-color: #28a745;
+}
+
+.confirmation-card .btn-danger {
+    background-color: #dc3545;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .upload-section {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    .upload-button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,142 @@
+/* Ensure the calculator is full-width, centered, and responsive */
+.scientific-calculator {
+    background: none;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%; /* Full width */
+}
+
+/* Calculator body */
+.scientific-calculator-body {
+    background: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Set a max width to avoid overflowing */
+    width: 100%; /* Make it responsive */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in width calculation */
+    overflow: hidden; /* Ensure no overflow */
+}
+
+/* Calculator screen */
+.scientific-calculator-screen {
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: right;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 100px; /* Prevent excessive height */
+}
+
+/* Calculator buttons grid */
+.scientific-calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 columns by default */
+    gap: 8px; /* Adjust gap to keep buttons inside the container */
+}
+
+/* Individual button styling */
+.scientific-calculator-buttons .btn {
+    font-size: 1rem;
+    padding: 16px; /* Reduced padding to fit more buttons */
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, transform 0.1s;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+/* Hover effect for buttons */
+.scientific-calculator-buttons .btn:hover {
+    background-color: #ddd;
+    transform: scale(1.05);
+}
+
+/* Primary buttons (numbers) */
+.scientific-calculator-buttons .btn-primary {
+    background-color: #11b98f;
+    color: #fff;
+}
+
+.scientific-calculator-buttons .btn-primary:hover {
+    background-color: #068565;
+}
+
+/* Secondary buttons (operators) */
+.scientific-calculator-buttons .btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.scientific-calculator-buttons .btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Danger button (clear) */
+.scientific-calculator-buttons .btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.scientific-calculator-buttons .btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Info button (other functions) */
+.scientific-calculator-buttons .btn-info {
+    background-color: #17a2b8;
+    color: #fff;
+}
+
+.scientific-calculator-buttons .btn-info:hover {
+    background-color: #138496;
+}
+
+/* Light button (equal or extra options) */
+.scientific-calculator-buttons .btn-light {
+    background-color: #f8f9fa;
+    color: #000;
+}
+
+.scientific-calculator-buttons .btn-light:hover {
+    background-color: #e2e6ea;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .scientific-calculator-screen {
+        font-size: 1.75rem;
+    }
+
+    .scientific-calculator-buttons .btn {
+        font-size: 0.875rem;
+        padding: 12px; /* Reduced padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .scientific-calculator-screen {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    .scientific-calculator-buttons {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns for smaller screens */
+    }
+
+    .scientific-calculator-buttons .btn {
+        font-size: 0.75rem;
+        padding: 10px; /* Further reduced padding for smaller screens */
+    }
+}

@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5">
+    <h2 class="mb-4">{{ course.title }}</h2>
+    <p class="lead">{{ course.description }}</p>
+    <h4 class="mt-4 mb-3">Videos</h4>
+    <div class="row">
+        {% for video in videos %}
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card shadow-sm border-light bg-light">
+                    <h5 class="card-title">{{ video.title }}</h5>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ video.title }}</h5>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <!-- Updated to use video.video_url directly -->
+                            <iframe class="embed-responsive-item" src="{{ video.video_url }}" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <form action="{% url 'delete_video' video.id %}" method="POST" style="display:inline;">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-danger btn-sm mt-2">Remove Video</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <div class="col-12">
+                <div class="alert alert-info">No videos available for this course.</div>
+            </div>
+        {% endfor %}
+    </div>
+    <a href="{% url 'search_videos' course.id %}" class="btn btn-primary mt-3">Add Video</a>
+    <a href="{% url 'course_list' %}" class="btn btn-secondary mt-3">Back to Course List</a>
+</div>
+
+<!-- Add this CSS to your styles.css or <style> section -->
+<style>
+    .card {
+        transition: transform 0.2s; /* Animation for hover effect */
+    }
+
+    .card:hover {
+        transform: scale(1.03); /* Slightly enlarge the card on hover */
+    }
+
+    .btn-danger {
+        transition: background-color 0.2s;
+    }
+
+    .btn-danger:hover {
+        background-color: #c82333; /* Darker red on hover */
+    }
+
+    /* Ensure cards are responsive and within the viewport */
+    .container {
+        max-width: 1200px; /* Set a maximum width for larger screens */
+    }
+
+    /* Responsive text color for card titles */
+    .card-title {
+        color: #333; /* Dark gray for better visibility */
+    }
+</style>
+
+{% endblock %}

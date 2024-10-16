@@ -1,0 +1,123 @@
+.calculator {
+    background: none;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%; /* Full width for larger screens */
+}
+
+.calculator-body {
+    max-width: 100%;
+    width: auto;
+    max-width: 600px; /* Increased width for larger screens */
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Screen area of the calculator */
+.calculator-screen {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+    margin-bottom: 20px;
+    text-align: right;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+/* Container for the calculator buttons */
+.calculator-buttons {
+    background-color: #e9ecef;
+    padding: 10px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; /* Reduced gap for better fitting */
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding and borders are calculated in the container's width */
+    overflow: hidden; /* Prevent any overflow of buttons */
+}
+
+/* Button styles */
+.calculator-buttons .btn {
+    font-size: 1.5rem; /* Increased font size for larger screens */
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px; /* Uniform button height */
+    width: 100%; /* Ensure buttons stretch to fill grid columns */
+    box-sizing: border-box; /* Include padding and border in button size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Button hover effects */
+.calculator-buttons .btn:hover {
+    transform: scale(1.05);
+}
+
+/* Stretch button groups (clear and equals buttons) */
+.calculator-buttons .col-3 {
+    grid-column: span 1;
+}
+
+.calculator-buttons .col-6 {
+    grid-column: span 2; /* Clear button spans 2 columns */
+}
+
+.calculator-buttons .col-12 {
+    grid-column: span 4; /* Equals button spans full width */
+}
+
+/* Responsive adjustments for tablets */
+@media (max-width: 768px) {
+    /* Smaller font sizes for tablets */
+    .input {
+        font-size: 1.8rem;
+    }
+
+    .result {
+        font-size: 1.6rem;
+    }
+
+    /* Adjust button size for tablets */
+    .calculator-buttons .btn {
+        font-size: 1.2rem;
+        padding: 12px;
+        height: 60px;
+    }
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 480px) {
+    /* Further adjustments for mobile screens */
+    .calculator-body {
+        padding: 10px;
+        max-width: 95%; /* Make the calculator fit smaller screens */
+    }
+
+    .calculator-screen {
+        padding: 10px;
+    }
+
+    .calculator-buttons .btn {
+        font-size: 1rem;
+        padding: 8px;
+        height: 50px;
+    }
+}
